@@ -33,19 +33,17 @@
   <button id="runScriptButton" onclick="runScript()">Run Script</button>
 
   <script>
-    function popup
-      // Open a popup window with specified URL and window features
-  var popup = window.open("index.html", "popup", "width=400,height=300");
+    // Open a popup window with specified URL and window features
+var popup = window.open("index.html", "Popup", "width=400,height=300");
 
-  // Check if the popup window was blocked by the browser
-  if (popup === null) {
-      alert("Popup blocked! Please allow popups for this website.");
+// Check if the popup window was blocked by the browser
+if (popup === null) {
+    alert("Popup blocked! Please allow popups for this website.");
 } else {
     // Popup window opened successfully
     // You can further manipulate the popup window here
 }
-    popup()
-    popup()
+
     function runScript() {
       var n1 = prompt("What is your name?");
       if (n1 === null) {
