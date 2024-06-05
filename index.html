@@ -6,10 +6,10 @@
   <title>test website</title>
 </head>
 <body>
-  <button onclick="runScript()">Run Script</button>
+  <button id="runScriptButton">Run Script</button>
 
   <script>
-    function runScript() {
+    document.getElementById("runScriptButton").addEventListener("click", function() {
       var n1 = prompt("What is your name?");
       if (n1 === null) {
         alert("You pressed cancel, don't do it again because it ruins my code");
@@ -36,7 +36,7 @@
       } else {
         alert("Invalid input. Please enter numeric values for age.");
       }
-    }
+    });
   </script>
 </body>
 </html>
