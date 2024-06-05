@@ -33,15 +33,6 @@
   <button id="runScriptButton" onclick="runScript()">Run Script</button>
 
   <script>
-    // Define an async function for the delay
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-// Usage:
-(async () => {
-  console.log("Before delay");
-  await delay(1000); // 1 second delay
-  console.log("After delay");
-})();
     // Open a popup window with specified URL and window features
 var popup = window.open("popup.html", "Popup", "width=400,height=300");
 
