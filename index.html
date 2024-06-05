@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>test website</title>
   <style>
-    /* Center the button horizontally and vertically */
+    /* Center the buttons horizontally and vertically */
     body {
       position: relative;
       height: 100vh;
@@ -13,24 +13,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
 
-    /* Style for the button */
-    #runScriptButton {
+    /* Style for the buttons */
+    .button {
       padding: 10px 20px;
       font-size: 16px;
       border: 2px solid #000;
       background-color: #fff;
       cursor: pointer;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin: 10px;
     }
   </style>
 </head>
 <body>
-  <button id="runScriptButton" onclick="runScript()">Run Script</button>
+  <button id="runScriptButton" class="button" onclick="runScript()">Run Script</button>
+  <button id="popupTestButton" class="button" onclick="popup()">Popup Test</button>
 
   <script>
     function popup() {
