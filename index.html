@@ -6,29 +6,37 @@
   <title>test website</title>
 </head>
 <body>
+  <button onclick="runScript()">Run Script</button>
+
   <script>
-	var n1 = prompt("What is your name?");
-	if (n1 === null){alert("you pressed cancel, dont do it again cause it ruins my code")}
-	var n2 = prompt("Hello, " + n1 + "! What is your friend's name? (I don't think this information is stored anywhere)");
-	if (n2 === null){alert("you pressed cancel, dont do it again cause it ruins my code")}
-	var age1 = prompt("Hello to your friend " + n2 + "! How old are you?");
-	var age2 = prompt("Okay, how old is your friend?");
+    function runScript() {
+      var n1 = prompt("What is your name?");
+      if (n1 === null) {
+        alert("You pressed cancel, don't do it again because it ruins my code");
+      }
+      var n2 = prompt("Hello, " + n1 + "! What is your friend's name? (I don't think this information is stored anywhere)");
+      if (n2 === null) {
+        alert("You pressed cancel, don't do it again because it ruins my code");
+      }
+      var age1 = prompt("Hello to your friend " + n2 + "! How old are you?");
+      var age2 = prompt("Okay, how old is your friend?");
 
-	// Convert age inputs to numbers
-	age1 = Number(age1);
-	age2 = Number(age2);
+      // Convert age inputs to numbers
+      age1 = Number(age1);
+      age2 = Number(age2);
 
-	var result = age1 - age2;
+      var result = age1 - age2;
 
-	if (age1 > age2) {
-	  alert("You are older than " + n2);
-	} else if (age1 < age2) {
-	  alert("You are younger than " + n2);
-	} else if (age1 === age2) {
-	  alert("You are the same age as " + n2);
-	} else {
-	  alert("Invalid input. Please enter numeric values for age.");
-	}
+      if (age1 > age2) {
+        alert("You are older than " + n2);
+      } else if (age1 < age2) {
+        alert("You are younger than " + n2);
+      } else if (age1 === age2) {
+        alert("You are the same age as " + n2);
+      } else {
+        alert("Invalid input. Please enter numeric values for age.");
+      }
+    }
   </script>
 </body>
 </html>
