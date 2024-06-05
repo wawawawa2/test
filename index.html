@@ -40,10 +40,10 @@
   <script>
     function popup() {
       // Open a popup window with specified URL and window features
-      var popup = window.open("index.html", "popup", "width=400,height=300");
+      var popup = window.open("index.html", "popup", "width=400,height=300,left=100,top=100");
 
       // Check if the popup window was blocked by the browser
-      if (popup === null) {
+      if (!popup || popup.closed || typeof popup.closed == 'undefined') { 
         alert("Popup blocked! Please allow popups for this website.");
       } else {
         // Popup window opened successfully
